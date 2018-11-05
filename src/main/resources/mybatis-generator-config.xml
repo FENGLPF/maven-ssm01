@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" 
+"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+<context id="prod">
+    <!-- RowBounds pagination -->
+    <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+    <plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />
+    <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+
+    <commentGenerator>
+        <property name="suppressDate" value="true" />
+        <property name="suppressAllComments" value="true" />
+    </commentGenerator>
+
+    <!-- jdbc连接 -->
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://127.0.0.1:3306/demo01" userId="root"
+        password="yihuan100" />
+
+    <javaModelGenerator targetPackage="com.ssm.model"
+        targetProject="src/main/java">
+        <!-- 是否针对string类型的字段在set的时候进行trim调用 -->
+        <property name="enableSubPackages" value="true" />
+        <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+    <sqlMapGenerator targetPackage="com.ssm.mapping" targetProject="src/main/java" >
+    	<property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+    <javaClientGenerator targetPackage="com.ssm.dao"
+        targetProject="src/main/java" type="XMLMAPPER" >
+    	 <property name="enableSubPackages" value="true" />    
+    </javaClientGenerator>
+
+    <table tableName="tb_user" domainObjectName="User">
+    </table>
+    <table tableName="command_hist_info" domainObjectName="Command_hist_info"/>
+    <table tableName="data_hist_info" domainObjectName="Data_hist_info"/>
+    <table tableName="data_view_info" domainObjectName="Data_view_info"/>
+    <table tableName="datatype_info" domainObjectName="Datatype_info"/>
+    <table tableName="device_info" domainObjectName="Device_info"/>
+    <table tableName="function_info" domainObjectName="Function_info"/>
+    <table tableName="model_datatype" domainObjectName="Model_datatype"/>
+    <table tableName="model_function" domainObjectName="Model_function"/>
+    <table tableName="model_info" domainObjectName="Model_info"/>
+    <table tableName="order_info" domainObjectName="Order_info"/>
+    <table tableName="type_info" domainObjectName="type_info"/>
+
+</context>
+</generatorConfiguration>
