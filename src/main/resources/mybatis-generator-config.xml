@@ -32,19 +32,11 @@
     	 <property name="enableSubPackages" value="true" />    
     </javaClientGenerator>
 
-    <table tableName="tb_user" domainObjectName="User">
-    </table>
-    <table tableName="command_hist_info" domainObjectName="Command_hist_info"/>
-    <table tableName="data_hist_info" domainObjectName="Data_hist_info"/>
-    <table tableName="data_view_info" domainObjectName="Data_view_info"/>
-    <table tableName="datatype_info" domainObjectName="Datatype_info"/>
-    <table tableName="device_info" domainObjectName="Device_info"/>
-    <table tableName="function_info" domainObjectName="Function_info"/>
-    <table tableName="model_datatype" domainObjectName="Model_datatype"/>
-    <table tableName="model_function" domainObjectName="Model_function"/>
-    <table tableName="model_info" domainObjectName="Model_info"/>
-    <table tableName="order_info" domainObjectName="Order_info"/>
-    <table tableName="type_info" domainObjectName="type_info"/>
+    <table schema="general" tableName="tb_user" domainObjectName="User"
+		enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+		enableSelectByExample="false" selectByExampleQueryId="false" >
+		<property name="useActualColumnNames" value="true"/>
+	</table>
 
 </context>
 </generatorConfiguration>

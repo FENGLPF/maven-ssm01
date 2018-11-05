@@ -10,7 +10,7 @@ public class TestController {
 	@RequestMapping("/t1")
 	@ResponseBody
 	public String t1() {
-		return "t221";
+		return "t1";
 	}
 	
 	@RequestMapping("t2")
